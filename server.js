@@ -25,12 +25,52 @@ router.use(express.static(path.resolve(__dirname, 'client')));
 // API Routes
 router.get('/api/v1/getData', function(request, response) {
     var data = [
-        {name: 'Ryan', color: 'red'},
-        {name: 'Trenton', color: 'orange'},
-        {name: 'Rachel', color: 'yellow'},
-        {name: 'Nolan', color: 'green'},
-        {name: 'Trevor', color: 'blue'},
-        {name: 'Nathan', color: 'purple'}
+        {question: 'What is your favorite color?', answers: [
+            {id: 1, value: "crimson"},
+            {id: 2, value: "chartreuse"},
+            {id: 3, value: "aquamarine"},
+            {id: 4, value: "sienna"},
+            {id: 5, value: "lavander blush"},
+            {id: 6, value: "azure"},
+            {id: 7, value: "light slate grey"},
+            {id: 8, value: "peru"},
+            {id: 9, value: "medium orchid"},
+            {id: 10, value: "carnation pink"},
+            ]},
+        {question: 'where is one place you would most want to travel to right now?', answers: [
+            {id: 1, value: "bora bora"},
+            {id: 2, value: "london"},
+            {id: 3, value: "barcelona"},
+            {id: 4, value: "Paris"},
+            {id: 5, value: "sydney"},
+            {id: 6, value: "new york"},
+            {id: 7, value: "maui"},
+            {id: 8, value: "maldives"},
+            {id: 9, value: "tokyo"},
+            {id: 10, value: "budapest"},
+            ]},
+            
+        {question: 'what movie do you think is the best?', answers: [
+            {id: 1, value: "mortdecai"},
+            {id: 2, value: "alice in wonder land"},
+            {id: 3, value: "edward scissorahnds"},
+            {id: 4, value: "pirates of the carabian"},
+            {id: 5, value: "the lone ranger"},
+            {id: 6, value: "transendence"},
+            {id: 7, value: "dark shadows"},
+            {id: 8, value: "black mass"},
+            {id: 9, value: " charlie and the chocolate factory"},
+            {id: 10, value: "sleepy hollow"},
+            ]},
+        {question: 'who do you want to win?', answers: [
+            {id: 1, value: "cleveland cavaliers"},
+            {id: 2, value: "golden state warriors"}
+            ]},
+        {question: 'do you enjoy nature?', answers: [
+            {id: 1, value: "yes"},
+            {id: 2, value: "no"},
+            ]},
+        
     ];
     response.send(data);
 });

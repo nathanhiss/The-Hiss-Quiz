@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/jessamynsmith/eu-web-starter"
   },
-  "author": "Jessamyn Smith",
+  "author": "Nathan Hiss",
   "dependencies": {
     "body-parser": "^1.15.1",
     "bower": "^1.7.9",
