@@ -1,5 +1,8 @@
 body {
     margin: 0;
+     font-family: 'Raleway', serif;
+        font-size: 24px;
+        background-color:  #ccffff
 }
 
 .spacer {
@@ -10,5 +13,8 @@ body {
 .clickable:hover {
     cursor: pointer;
     color: #ffffff;
-    background-color: #001100
+    background-color: #66ffb3
+}
+img {
+    width: 800px;
 }
