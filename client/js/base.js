@@ -2,21 +2,23 @@
 
 // Declare app level module which depends on views, and components
 angular.module('app', [
-        'ngRoute'
-    ])
+    'ngRoute'
+])
 
-    .config(['$routeProvider', function($routeProvider) {
-        console.log('test');
+.config(['$routeProvider', function($routeProvider) {
+   
 
-        $routeProvider.when('/game', {
+    $routeProvider.when('/game', {
             templateUrl: 'templates/game.html',
             controller: 'MyController'
         })
-        .otherwise({redirectTo: '/game'})
+        .otherwise({
+            redirectTo: '/game'
+        });
 
-    }])
+}])
 
-    .controller('MyController', function($scope, $http) {
+.controller('MyController', function($scope, $http) {
 
     $scope.questions = [];
     $scope.currentsquestion = {};
@@ -29,11 +31,10 @@ angular.module('app', [
         $http.post('/api/v1/postData', {
             answers: answers
         }).then(function(response) {
-            console.log(response.data.message);
             $scope.message = response.data.message.text;
             $scope.img = response.data.message.img;
         });
-        $scope.answers = '';
+        answers = [];
     };
 
     $scope.getData = function() {
@@ -42,22 +43,17 @@ angular.module('app', [
             $scope.done = false;
             questionIndex = 0;
             $scope.currentQuestion = $scope.questions[questionIndex];
-            console.log($scope.currentQuestion);
+           
         });
     };
 
     $scope.answerQuestion = function(answerValue) {
-        console.log(answerValue);
-        console.log(questionIndex);
         answers.push(answerValue);
-        questionIndex = questionIndex + 1
-        console.log('questionIndex: ' + questionIndex);
-        console.log('currentQuestion: ' + JSON.stringify($scope.questions[questionIndex]));
-        $scope.currentQuestion = $scope.questions[questionIndex]
-            //checking if the quiz is over!
+        questionIndex = questionIndex + 1;
+        $scope.currentQuestion = $scope.questions[questionIndex];
+        //checking if the quiz is over!
         if (questionIndex == $scope.questions.length) {
             $scope.done = true;
-            console.log('Wait a Moment we are Building a Wall');
             $scope.postData();
         }
 

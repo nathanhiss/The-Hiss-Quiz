@@ -1,8 +1,8 @@
 body {
     margin: 0;
-     font-family: 'Raleway', serif;
-        font-size: 24px;
-        background-color:  #ccffff
+    font-family: 'Raleway', serif;
+    font-size: 24px;
+    background-color: #ccffff
 }
 
 .spacer {
@@ -14,6 +14,7 @@ body {
     color: #ffffff;
     background-color: #66ffb3
 }
+
 img {
     width: 800px;
 }
