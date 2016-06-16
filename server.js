@@ -70,7 +70,6 @@ router.get('/api/v1/getData', function(request, response) {
             {id: 1, value: "yes"},
             {id: 2, value: "no"},
             ]},
-        
     ];
     response.send(data);
 });

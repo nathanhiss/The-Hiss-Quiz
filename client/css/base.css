@@ -9,7 +9,6 @@ body {
     height: 30px;
 }
 
-
 .clickable:hover {
     cursor: pointer;
     color: #ffffff;
