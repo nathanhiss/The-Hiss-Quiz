@@ -26,7 +26,7 @@ router.use(express.static(path.resolve(__dirname, 'client')));
 router.get('/api/v1/getData', function(request, response) {
     var data = [
         {question: 'What is your favorite color?', answers: [
-            {id: 1, value: "crimson"},
+            {id: 1, value: "crimson" ,},
             {id: 2, value: "chartreuse"},
             {id: 3, value: "aquamarine"},
             {id: 4, value: "sienna"},
@@ -41,7 +41,7 @@ router.get('/api/v1/getData', function(request, response) {
             {id: 1, value: "bora bora"},
             {id: 2, value: "london"},
             {id: 3, value: "barcelona"},
-            {id: 4, value: "Paris"},
+            {id: 4, value: "Cape Town"},
             {id: 5, value: "sydney"},
             {id: 6, value: "new york"},
             {id: 7, value: "maui"},
@@ -84,22 +84,24 @@ router.post('/api/v1/postData', function(request, response) {
 //   'golden state warriors',
 //   'yes' ]
     var messages = [
-            {text: 'You got penthouse. You have a chic personality and an avid yearning for organic food. You love exercise, social activities but recharge your batteries alone.', img: 'penthouse'},
-       {text: 'Your dream home is a beach house. You love the relaxed life and to wake up with the calming sounds of water. You enjoy tranquility and either have or wants to join a yoga class.', img: 'beach house'},
-       {text: 'Your future house will be in the desert. You enjoy peace sometimes and the arid climate. Your home is heavily air conditioned but a step outside brings you back to reality. you enjoy dipping into a pool in the hot weather because you have such a spunky personality. ', img: 'desert house'},
-        {text:'You fancy the log cabin home. Being in a forest roars your personality to life and all your friends can see how you really are. You would enjoy living in a home secluded in a forest. ', img: 'forest house'},
-        {text: 'You got Suburban House. You enjoy the suburban lifestyle. You are not too secluded but you also are not too close to the city. Mini vans and Whole Foods represents you. ', img: 'suburban house'},
-        {text: 'You are one who would enjoy living on the edge. UnderWater would suite your personality for your dream home. away from the noise of a conventional home you can be undisturbed under water. You can blast your music hold extravagant parties and live your life to the fullest underwater.', img: 'underwater house'},
-        {text: 'You enjoy the rich life. You are not a basic starbucks customer, you take golden coffee beans and cold brew them on your throne. You have hundreds of servants to appease you and have a plethora of cars to choose from to drive you to the local Gucci store. ', img: 'mansion'},
-       {text: 'You got HOMELESS, life is just not on your side. flip another coin to try again!', img: 'tent'}, 
-       {text: 'WILD CARD!!! You got Donald Trump. Redo the quiz before your hair turns floppy!', img: 'donald'}, 
+               {text: 'Your dream home is a beach house. You love the relaxed life and to wake up with the calming sounds of water. You enjoy tranquility and either have or wants to join a yoga class.', img: 'beach house'},
+              {text: 'You got Suburban House. You enjoy the suburban lifestyle. You are not too secluded but you also are not too close to the city. Mini vans and Whole Foods represents you. ', img: 'suburban house'}, 
+              {text: 'The city life is your life. Bustling through the streets is what you enjoy. All the high tech buildings, large malls, and interesting people give joy to your life. You have gotten so accustomed to public transport that you bring your own hand sanitizer and seat cover. A city home is your home', img: 'city'},
+               {text: 'Your future house will be in the desert. You enjoy peace sometimes and the arid climate. Your home is heavily air conditioned but a step outside brings you back to reality. you enjoy dipping into a pool in the hot weather because you have such a spunky personality. ', img: 'desert house'},
+                   {text: 'You got penthouse. You have a chic personality and an avid yearning for organic food. You love exercise, social activities but recharge your batteries alone.', img: 'penthouse'},
+                {text:'You fancy the log cabin home. Being in a forest roars your personality to life and all your friends can see how you really are. You would enjoy living in a home secluded in a forest. ', img: 'forest house'},
+     
+                  {text: 'You are one who would enjoy living on the edge. UnderWater would suite your personality for your dream home. away from the noise of a conventional home you can be undisturbed under water. You can blast your music hold extravagant parties and live your life to the fullest underwater.', img: 'underwater house'},
+                  {text: 'You enjoy the rich life. You are not a basic starbucks customer, you take golden coffee beans and cold brew them on your throne. You have hundreds of servants to appease you and have a plethora of cars to choose from to drive you to the local Gucci store. ', img: 'mansion'},
+             {text: 'You got HOMELESS, life is just not on your side. flip another coin to try again!', img: 'tent'}, 
+                    {text: 'WILD CARD!!! You got Donald Trump. Redo the quiz before your hair turns floppy!', img: 'donald'}, 
         ];
 
-    // var result = 0;r
-    // for (var i = 0; i < answers.length; i++) {
-    //     result = result + answers[i];
-    // }
-    // console.log(result);
+    var result = 1;
+for (var i = 1; i < result.length; i++) {
+     result = result + result[i];
+     }
+     console.log(result);
     
     var result = Math.floor(Math.random() * messages.length);
     console.log(result);
