@@ -6,7 +6,6 @@ angular.module('app', [
 ])
 
 .config(['$routeProvider', function($routeProvider) {
-   
 
     $routeProvider.when('/game', {
             templateUrl: 'templates/game.html',
@@ -47,13 +46,15 @@ angular.module('app', [
         });
     };
 
-    $scope.answerQuestion = function(answerValue) {
+    $scope.answerQuestion = function(answerValue)  {
         answers.push(answerValue);
-        questionIndex = questionIndex + 1;
-        $scope.currentQuestion = $scope.questions[questionIndex];
-        //checking if the quiz is over!
+        questionIndex = questionIndex + 1
+
+        $scope.currentQuestion = $scope.questions[questionIndex]
+            //checking if the quiz is over!
         if (questionIndex == $scope.questions.length) {
             $scope.done = true;
+            console.log('Wait a Moment we are Building a Wall');
             $scope.postData();
         }
 

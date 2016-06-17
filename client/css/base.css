@@ -19,3 +19,95 @@ img {
     width: 800px;
     max-width: 100%;
 }
+
+.crimson {
+    color: #ffffff;
+    background-color: #800000;
+}
+
+.crimson:hover {
+    background-color: #990000;
+}
+
+.bangladeshgreen {
+    color: #ffffff;
+    background-color: #00cc96;
+}
+
+.bangladeshgreen:hover {
+    background-color: #4dffcf;
+}
+
+.aquamarine {
+    color: #ffffff;
+    background-color: #008055;
+}
+.aquamarine:hover {
+    background-color: #7FFFD4;
+}
+.sienna {
+    color: #ffffff;
+    background-color: #b35b32;
+}
+
+.sienna:hover {
+    background-color: #d89374;
+}
+.lavenderblush {
+    color: #ffffff;
+    background-color: #ff0055;
+}
+
+.lavenderblush:hover {
+    background-color: #ffb3cc;
+}
+.azure {
+    color: #ffffff;
+    background-color: #00b3b3;
+}
+
+.azure:hover {
+    background-color: #80ffff;
+}
+.lightslategrey {
+    color: #ffffff;
+    background-color: #778899;
+}
+
+.lightslategrey:hover {
+    background-color: #b6bfc8;
+}
+.azure {
+    color: #ffffff;
+    background-color: #00b3b3;
+}
+
+.azure:hover {
+    background-color: #80ffff;
+}
+.peru {
+    color: #ffffff;
+    background-color: #cd853f;
+}
+
+.peru:hover {
+    background-color: #d5995d;
+}
+.mediumorchid {
+    color: #ffffff;
+    background-color: #ad34cb;
+}
+
+.mediumorchid:hover {
+    background-color: #c571da
+;
+}
+.carnationpink {
+    color: #ffffff;
+    background-color: #ff3355;
+}
+
+.carnationpink:hover {
+    background-color: #ffc0cb
+;
+}
