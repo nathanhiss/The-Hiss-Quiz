@@ -111,3 +111,21 @@ img {
     background-color: #ffc0cb
 ;
 }
+.borabora {
+    color: #ffffff;
+    background-color: #ffc2c2;
+}
+
+.borabora:hover {
+    background-color: #ffd1c2
+;
+}
+.london {
+    color: #ffffff;
+    background-color: #ffe0c2;
+}
+
+.london:hover {
+    background-color: #fff0c2
+;
+}

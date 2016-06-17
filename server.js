@@ -71,34 +71,44 @@ router.get('/api/v1/getData', function(request, response) {
             question: 'Where is one place you would most want to travel to right now?',
             answers: [{
                 id: 1,
-                value: "Bora Bora"
+                value: "Bora Bora",
+                className: 'borabora'
             }, {
                 id: 2,
-                value: "London"
+                value: "London",
+                className: 'london'
             }, {
                 id: 3,
-                value: "Barcelona"
+                value: "Barcelona",
+                className: 'barcelona'
             }, {
                 id: 4,
-                value: "Cape Town"
+                value: "Cape Town",
+                className: 'capetown'
             }, {
                 id: 5,
-                value: "Sydney"
+                value: "Sydney",
+                className: 'sydney'
             }, {
                 id: 6,
-                value: "New York"
+                value: "New York",
+                className: 'newyork'
             }, {
                 id: 7,
-                value: "Maui"
+                value: "Maui",
+                className: 'maui'
             }, {
                 id: 8,
-                value: "Maldives"
+                value: "Maldives",
+                className:'maldives'
             }, {
                 id: 9,
-                value: "Tokyo"
+                value: "Tokyo",
+                className: 'tokyo'
             }, {
                 id: 10,
-                value: "Budapest"
+                value: "Budapest",
+                className: 'budapest'
             }, ]
         },
 
@@ -115,7 +125,7 @@ router.get('/api/v1/getData', function(request, response) {
                 value: "Edward Scissorhands"
             }, {
                 id: 4,
-                value: "Pirates of the Carabian"
+                value: "Pirates of the Caribbean"
             }, {
                 id: 5,
                 value: "The Lone Ranger"
@@ -197,6 +207,7 @@ router.post('/api/v1/postData', function(request, response) {
 
     // Randomly assigned result
     //var result = Math.floor(Math.random() * messages.length);
+   
    // we are initializing the result counters.  
    var results = [];
    for (var  i = 0; i < answers.length; i++){
@@ -204,6 +215,7 @@ router.post('/api/v1/postData', function(request, response) {
    }
    
    if (answers [4] == 1) {
+       console.log('q4');
        results [0]++;
        results [3]++;
        results [5]++;
@@ -211,15 +223,20 @@ router.post('/api/v1/postData', function(request, response) {
        results [8]++;
    } 
    if (answers [3] == 1){
-       results [9]++;
+       console.log('q3');
        results [8]++;
+       results [9]++;
    }
+   console.log(results);
    var indexlol = 0;
    var winningAnswer = 0;
    for(var i = 0; i <results.length; i++) {
-      if (results [i] > winningAnswer  ) {
+       var coin = Math.random();
+       console.log(coin);
+      if (results [i] >= winningAnswer && coin < .5  ) {
           indexlol = i;
           winningAnswer = results [i];
+          console.log(indexlol);
       } 
    }
 
