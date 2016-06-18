@@ -3,7 +3,7 @@
     <div class="page-header">
         <h1>Your Dream House</h1>
     </div>
-    <div ng-show="done" class="row">
+    <div ng-if="done" class="row">
         <div class="col-sm-12 col-md-12">
             {{message}}
             <hr>
@@ -13,7 +13,7 @@
     <div class="row">
         <div class="col-md-3">
 
-            <button class="btn btn-secondary btn-lg" ng-click="getData()" ng-hide="currentQuestion">Start Quiz!</button>
+            <button class="btn btn-secondary btn-lg" ng-click="getData()" ng-if="!currentQuestion">Start Quiz!</button>
         </div>
     </div>
     <div class="row">
@@ -31,7 +31,7 @@
     
     <div ng-hide="!done">
         <div class="spacer"></div>
-        <img ng-src="/img/{{img}}.jpg" alt="Description" />
+        <img ng-class= "imgonion()" ng-src="/img/{{img}}" alt="Description" ng-repeat= "img in imgs" />
     </div>
         
 </div>

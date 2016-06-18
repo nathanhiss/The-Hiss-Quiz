@@ -11,7 +11,7 @@ body {
 
 .clickable:hover {
     cursor: pointer;
-    color: #ffffff;
+    border: 5px black solid;
     background-color: #66ffb3
 }
 
@@ -112,7 +112,7 @@ img {
 ;
 }
 .borabora {
-    color: #ffffff;
+  
     background-color: #ffc2c2;
 }
 
@@ -121,11 +121,184 @@ img {
 ;
 }
 .london {
-    color: #ffffff;
+    
     background-color: #ffe0c2;
 }
 
 .london:hover {
     background-color: #fff0c2
 ;
+}
+.barcelona {
+    
+    background-color: #ffffc2;
+}
+
+.barcelona:hover {
+    background-color: #f0ffc2
+;
+}
+.capetown {
+   
+    background-color: #e0ffc2;
+}
+
+.capetown:hover {
+    background-color: #d1ffc2
+;
+}
+.sydney {
+    
+    background-color: #c2ffc2;
+}
+
+.sydney:hover {
+    background-color: #c2ffd1
+;
+}
+.newyork {
+    
+    background-color: #c2ffe0;
+}
+
+.newyork:hover {
+    background-color: #c2fff0
+;
+}
+.newyork {
+    
+    background-color: #c2e0ff;
+}
+
+.newyork:hover {
+    background-color: #c2d1ff
+;
+}
+.maui {
+    
+    background-color: #c2c2ff;
+}
+
+.maui:hover {
+    background-color: #d1c2ff
+;
+}
+.maldives {
+    
+    background-color: #e0c2ff;
+}
+
+.maldives:hover {
+    background-color: #f0c2ff
+;
+}
+.tokyo {
+    
+    background-color: #ffc2ff;
+}
+
+.tokyo:hover {
+    background-color: #ffc2f0
+;
+}
+.budapest {
+    
+    background-color: #ffc2e0;
+}
+
+.budapest:hover {
+    background-color: #ffc2d1
+;
+}
+.mortdecai {
+    
+    background-color: #5cd6d6;
+}
+
+.mortdecai:hover {
+    background-color: #cc5933
+;
+}
+.alice {
+    
+    background-color: #47d1d1;
+}
+
+.alice:hover {
+    background-color: #cca633
+;
+}
+.ed {
+    
+    background-color: #33cccc;
+}
+
+.ed:hover {
+    background-color: #a6cc33
+;
+}
+.pirate {
+    
+    background-color: #2eb8b8;
+}
+
+.pirate:hover {
+    background-color: #59cc33
+;
+}
+.lone {
+    
+    background-color: #29a3a3;
+}
+
+.lone:hover {
+    background-color: #33cca6
+;
+}
+.tran {
+    
+    background-color: #248f8f;
+}
+
+.tran:hover {
+    background-color: #33a6cc
+;
+}
+.dark {
+    
+    background-color: #1f7a7a;
+}
+
+.dark:hover {
+    background-color: #3359cc
+;
+}
+.mass {
+    
+    background-color: #196666;
+}
+
+.mass:hover {
+    background-color: #5933cc
+;
+}
+.charlie {
+    
+    background-color: #145252;
+}
+
+.charlie:hover {
+    background-color: #a633cc
+;
+}
+.hollow {
+    
+    background-color: #0f3d3d;
+}
+
+.hollow:hover {
+    background-color: #cc33a6;
+}
+.strange {
+    width: 20%;
 }

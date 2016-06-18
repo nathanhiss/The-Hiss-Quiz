@@ -116,34 +116,44 @@ router.get('/api/v1/getData', function(request, response) {
             question: 'What movie do you think is the best?',
             answers: [{
                 id: 1,
-                value: "Mortdecai"
+                value: "Mortdecai",
+                className: 'mortdecai'
             }, {
                 id: 2,
-                value: "Alice in Wonderland"
+                value: "Alice in Wonderland",
+                className: 'alice'
             }, {
                 id: 3,
-                value: "Edward Scissorhands"
+                value: "Edward Scissorhands",
+                className: 'ed'
             }, {
                 id: 4,
-                value: "Pirates of the Caribbean"
+                value: "Pirates of the Caribbean",
+                className: 'pirate'
             }, {
                 id: 5,
-                value: "The Lone Ranger"
+                value: "The Lone Ranger",
+                className: 'lone'
             }, {
                 id: 6,
-                value: "Transcendence"
+                value: "Transcendence",
+                className: 'tran'
             }, {
                 id: 7,
-                value: "Dark Shadows"
+                value: "Dark Shadows",
+                className: 'dark'
             }, {
                 id: 8,
-                value: "Black Mass"
+                value: "Black Mass",
+                className: 'mass'
             }, {
                 id: 9,
-                value: "Charlie and the Chocolate Factory"
+                value: "Charlie and the Chocolate Factory",
+                className: 'charlie'
             }, {
                 id: 10,
-                value: "Sleepy hollow"
+                value: "Sleepy hollow",
+                className: 'hollow'
             }, ]
         }, {
             question: 'Who do you want to win?',
@@ -172,76 +182,48 @@ router.post('/api/v1/postData', function(request, response) {
     var answers = request.body.answers;
     var messages = [{
             text: 'Your dream home is a Beach House. You love the relaxed life and to wake up with the calming sounds of water. You enjoy tranquility and either have or want to join a yoga class.',
-            img: 'beach house'
+            img: ['beach house.jpg']
         }, {
             text: 'You got Suburban House. You enjoy the suburban lifestyle. You are not too secluded but you also are not too close to the city. Mini vans and Whole Foods represents you. ',
-            img: 'suburban house'
+            img: ['suburban house.jpg']
         }, {
             text: 'The city life is your life. Bustling through the streets is what you enjoy. All the high tech buildings, large malls, and interesting people give joy to your life. You have gotten so accustomed to public transport that you bring your own hand sanitizer and seat cover. A City Home is your home',
-            img: 'city'
+            img: ['city.jpg']
         }, {
             text: 'Your future house will be in the desert. You enjoy peace and the arid climate. Your home is heavily air conditioned but a step outside brings you back to reality. You enjoy dipping into a pool in the hot weather because you have such a spunky personality. ',
-            img: 'desert house'
+            img: ['desert house.jpg']
         }, {
             text: 'You got Penthouse. You have a chic personality and an avid yearning for organic food. You love exercise and social activities but recharge your batteries alone.',
-            img: 'penthouse'
+            img: ['penthouse.jpg']
         }, {
             text: 'You fancy the Log Cabin Home. Being in a forest roars your personality to life and all your friends can see how you really are. You would enjoy living in a home secluded in a forest. ',
-            img: 'forest house'
+            img: ['forest house.jpg']
         },
 
         {
             text: 'You are one who would enjoy living on the edge. UnderWater would suite your personality for your dream home. Away from the noise of a conventional home you can be undisturbed under water. You can blast your music, hold extravagant parties and live your life to the fullest underwater.',
-            img: 'underwater house'
+            img: ['underwater house.jpg']
         }, {
             text: 'You enjoy the rich life. You are not a basic Starbucks customer, you take golden coffee beans and cold brew them on your throne. You have hundreds of servants to appease you and have a plethora of cars to choose from to drive you to the local Gucci store. ',
-            img: 'mansion'
+            img: ['mansion.jpg']
         }, {
             text: 'You got HOMELESS, life is just not on your side. Flip another coin to try again!',
-            img: 'tent'
+            img: ['tent.jpg']
         }, {
             text: 'WILD CARD!!! You got Donald Trump. Redo the quiz before your hair turns floppy!',
-            img: 'donald'
+            img: ['donald.jpg', 'dt 2.jpg', 'dt 3.jpg', 'dt.jpg', 'dt1.gif'] 
         },
     ];
 
     // Randomly assigned result
-    //var result = Math.floor(Math.random() * messages.length);
-   
-   // we are initializing the result counters.  
-   var results = [];
-   for (var  i = 0; i < answers.length; i++){
-       results.push (0);
-   }
-   
-   if (answers [4] == 1) {
-       console.log('q4');
-       results [0]++;
-       results [3]++;
-       results [5]++;
-       results [6]++;
-       results [8]++;
-   } 
-   if (answers [3] == 1){
-       console.log('q3');
-       results [8]++;
-       results [9]++;
-   }
-   console.log(results);
-   var indexlol = 0;
-   var winningAnswer = 0;
-   for(var i = 0; i <results.length; i++) {
-       var coin = Math.random();
-       console.log(coin);
-      if (results [i] >= winningAnswer && coin < .5  ) {
-          indexlol = i;
-          winningAnswer = results [i];
-          console.log(indexlol);
-      } 
-   }
-
+    var result = Math.floor(Math.random() * messages.length);
+    
+ if (answers [3] == 2){
+       result = 9;
+     }
+    
     var data = {
-        message: messages[indexlol]
+        message: messages[result]
     };
     response.send(data);
 });

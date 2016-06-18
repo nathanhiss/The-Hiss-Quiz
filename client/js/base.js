@@ -31,7 +31,7 @@ angular.module('app', [
             answers: answers
         }).then(function(response) {
             $scope.message = response.data.message.text;
-            $scope.img = response.data.message.img;
+            $scope.imgs = response.data.message.img;
         });
         answers = [];
     };
@@ -59,5 +59,11 @@ angular.module('app', [
         }
 
     };
+    $scope.imgonion = function() {
+        if ($scope.imgs.length > 1)  {
+            return "strange"
+        }
+    }
 });
+
 //record their data and based on a certain amout of answers they give they will get an output too their answers which they gave.
